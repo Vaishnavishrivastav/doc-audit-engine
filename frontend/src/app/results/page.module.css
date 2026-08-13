@@ -1,0 +1,158 @@
+.main {
+  min-height: 100vh;
+  background-color: #0a0f1e;
+  color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  padding: 100px 20px 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.loadingCard {
+  width: 100%;
+  max-width: 500px;
+  height: 240px;
+  background-color: #111827;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .7;
+  }
+}
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  animation: loading 1.5s infinite linear;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+.loadingTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.loadingSubtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.errorContainer {
+  text-align: center;
+  background-color: #111827;
+  padding: 48px;
+  border-radius: 16px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  width: 100%;
+  max-width: 500px;
+  margin-top: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.errorTitle {
+  color: #ef4444;
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.errorText {
+  color: #94a3b8;
+  margin-bottom: 32px;
+  font-size: 1.125rem;
+}
+
+.backButton {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.backButton:hover {
+  background-color: #4b8df6;
+  transform: translateY(-1px);
+}
+
+.resultsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.newAuditButton {
+  display: inline-block;
+  background-color: transparent;
+  color: #f1f5f9;
+  border: 2px solid #3b82f6;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.newAuditButton:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
+}

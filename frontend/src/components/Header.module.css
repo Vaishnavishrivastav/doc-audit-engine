@@ -1,0 +1,38 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 2rem;
+  background-color: rgba(10, 15, 30, 0.93);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1e293b;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+}
+
+.logoText {
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.poweredBy {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
